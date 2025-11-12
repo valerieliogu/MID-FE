@@ -1,9 +1,9 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import Header from "./components/Header";
-import Home from "./components/Home";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import Navbar from "./Navbar";
+import Header from "./Header";
+import Home from "./Home";
+import Contact from "./Contact";
+import Footer from ".//Footer";
 
 function App() {
   return (
