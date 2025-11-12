@@ -1,20 +1,16 @@
 import React from "react";
-import Navbar from "./Navbar";
-import Header from "./Header";
-import Home from "./Home";
-import About from "./About";
-import Projects from "./Projects";
-import Contact from "./Contact";
-import Footer from "./Footer";
+import Navbar from "./components/Navbar";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div>
+    <div className="bg-dark text-primary font-sans scroll-smooth">
       <Navbar />
       <Header />
       <Home />
-      <About />
-      <Projects />
       <Contact />
       <Footer />
     </div>

@@ -1,42 +1,46 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 function Contact() {
   return (
-    <section
-      id="contact"
-      className="min-h-screen flex flex-col justify-center items-center text-center bg-gray-800 text-white px-6 py-20"
-    >
-      <h2 className="text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-pink-400">
+    <section id="contact" className="py-20 bg-[#2A323F] text-center">
+      <motion.h2
+        className="text-4xl font-bold mb-8 text-primary"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
         Contact Me
-      </h2>
-      <p className="text-gray-300 mb-8 max-w-xl">
-        Feel free to reach out for collaborations or just say hello 👋  
-        I’ll do my best to reply as soon as possible.
-      </p>
+      </motion.h2>
 
-      <form className="w-full max-w-md space-y-4">
+      <motion.form
+        className="max-w-md mx-auto flex flex-col space-y-4"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5 }}
+      >
         <input
           type="text"
           placeholder="Your Name"
-          className="w-full p-3 rounded-lg bg-gray-900 text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="p-3 rounded-lg border border-primary bg-[#394150] text-primary"
         />
         <input
           type="email"
           placeholder="Your Email"
-          className="w-full p-3 rounded-lg bg-gray-900 text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="p-3 rounded-lg border border-primary bg-[#394150] text-primary"
         />
         <textarea
           placeholder="Your Message"
+          className="p-3 rounded-lg border border-primary bg-[#394150] text-primary"
           rows="4"
-          className="w-full p-3 rounded-lg bg-gray-900 text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
         ></textarea>
         <button
           type="submit"
-          className="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-lg transition-all duration-300"
+          className="bg-primary text-dark font-bold py-3 rounded-lg hover:scale-105 transition-transform"
         >
           Send Message
         </button>
-      </form>
+      </motion.form>
     </section>
   );
 }
